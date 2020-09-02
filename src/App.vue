@@ -7,6 +7,18 @@
     <router-view />
   </div>
 </template>
-
+<script>
+export default {
+  created() {
+    console.log(123)
+    setTimeout(() => {
+      window.onload = function() {
+        console.log(2)
+        console.log(window.navigator.userAgent)
+      }
+    }, 1000)
+  }
+}
+</script>
 <style lang="scss">
 </style>
