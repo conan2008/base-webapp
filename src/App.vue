@@ -9,10 +9,10 @@
 </template>
 <script>
 export default {
-  created() {
+  created () {
     console.log(123)
     setTimeout(() => {
-      window.onload = function() {
+      window.onload = function () {
         console.log(2)
         console.log(window.navigator.userAgent)
       }
