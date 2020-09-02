@@ -11,11 +11,9 @@
 export default {
   created () {
     console.log(123)
+    console.log(window)
     setTimeout(() => {
-      window.onload = function () {
-        console.log(2)
-        console.log(window.navigator.userAgent)
-      }
+      console.log(window.navigator.userAgent)
     }, 1000)
   }
 }
