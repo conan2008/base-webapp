@@ -16,7 +16,7 @@ export default {
       console.log(window.navigator.userAgent)
     }, 1000)
 
-    debugger
+    console.log(wx.miniProgram)
     if (wx.miniProgram.checkJSApi) {
       wx.gminiProgram.etLocalImgData({
         localId: '', // 图片的localID
