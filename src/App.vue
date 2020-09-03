@@ -16,9 +16,8 @@ export default {
       console.log(window.navigator.userAgent)
     }, 1000)
 
-    console.log(wx.miniProgram)
-    if (wx.miniProgram.checkJSApi) {
-      wx.gminiProgram.etLocalImgData({
+    if (wx.checkJSApi) {
+      wx.etLocalImgData({
         localId: '', // 图片的localID
         success: function (res) {
           console.log(res) // localData是图片的base64数据，可以用img标签显示
