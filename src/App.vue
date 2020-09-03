@@ -19,17 +19,12 @@ export default {
   },
   methods: {
     handleClick () {
-      console.log('checkJSApi', window.wx.checkJsApi)
-      console.log('checkJSApi', window.wx.checkJsApi())
-      if (window.wx.checkJsApi()) {
-        console.log(999)
-        window.wx.getLocalImgData({
-          localId: '', // 图片的localID
-          success: function (res) {
-            console.log(res) // localData是图片的base64数据，可以用img标签显示
-          }
-        })
-      }
+      window.wx.getLocalImgData({
+        localId: '', // 图片的localID
+        success: function (res) {
+          console.log(res) // localData是图片的base64数据，可以用img标签显示
+        }
+      })
     }
   }
 }
