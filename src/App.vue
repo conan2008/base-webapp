@@ -19,8 +19,9 @@ export default {
   },
   methods: {
     handleClick () {
-      console.log('checkJSApi', wx.checkJSApi)
-      if (window.wx.checkJSApi()) {
+      console.log('checkJSApi', window.wx.checkJsApi)
+      console.log('checkJSApi', window.wx.checkJsApi())
+      if (window.wx.checkJsApi()) {
         console.log(999)
         window.wx.getLocalImgData({
           localId: '', // 图片的localID
