@@ -15,14 +15,17 @@ export default {
     console.log(window)
     setTimeout(() => {
       console.log(window.navigator.userAgent)
+      console.log('sss', wx.chooseImage)
     }, 1000)
   },
   methods: {
     handleClick () {
-      window.wx.getLocalImgData({
-        localId: '', // 图片的localID
+      window.wx.chooseImage({
+        count: 2, // 默认9
+        sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+        sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
         success: function (res) {
-          console.log(res) // localData是图片的base64数据，可以用img标签显示
+          console.log(res)
         }
       })
     }
