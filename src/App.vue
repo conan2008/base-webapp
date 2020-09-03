@@ -19,9 +19,10 @@ export default {
   },
   methods: {
     handleClick () {
-      if (wx.checkJSApi) {
+      console.log('checkJSApi', wx.checkJSApi)
+      if (window.wx.checkJSApi) {
         console.log(999)
-        wx.getLocalImgData({
+        window.wx.getLocalImgData({
           localId: '', // 图片的localID
           success: function (res) {
             console.log(res) // localData是图片的base64数据，可以用img标签显示
