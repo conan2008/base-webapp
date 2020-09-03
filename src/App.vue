@@ -20,7 +20,7 @@ export default {
   methods: {
     handleClick () {
       console.log('checkJSApi', wx.checkJSApi)
-      if (window.wx.checkJSApi) {
+      if (window.wx.checkJSApi()) {
         console.log(999)
         window.wx.getLocalImgData({
           localId: '', // 图片的localID
